@@ -32,7 +32,7 @@ function renderGrid(gridSize) {
 
 function changeGridColor() {
   gridContainer.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = 'black';
+    e.target.style.backgroundColor = generateRandomColor();
   });
 }
 
@@ -40,3 +40,31 @@ function changeGridColor() {
 gridChangeBtn.addEventListener('click', () => {
   getGridSize();
 });
+
+function generateRandomColor() {
+  const randomInt = Math.floor(Math.random() * 5) + 1;
+
+  let randomColor;
+
+  switch (true) {
+    case randomInt == 1:
+      randomColor = '#2a9d8f';
+      break;
+    case randomInt == 2:
+      randomColor = '#e9c46a';
+      break;
+    case randomColor == 3:
+      randomColor = '#f4a261';
+      break;
+    case randomColor == 4:
+      randomColor = '#e76f51';
+      break;
+    case randomColor == 5:
+      randomColor = '#669bbc';
+      break;
+    default:
+      randomColor = '#E2786F';
+  }
+
+  return randomColor;
+}

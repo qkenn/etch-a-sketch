@@ -21,8 +21,8 @@ function renderGrid(gridSize) {
     const gridItem = document.createElement('div');
     gridItem.className = 'item';
 
-    gridItem.style.width = `${800 / gridSize - 2}px`;
-    gridItem.style.heigh = `${800 / gridSize - 2}px`;
+    gridItem.style.width = `${700 / gridSize - 2}px`;
+    gridItem.style.heigh = `${700 / gridSize - 2}px`;
 
     gridContainer.appendChild(gridItem);
   }

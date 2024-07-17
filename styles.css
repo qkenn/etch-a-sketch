@@ -4,13 +4,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(116, 130, 250);
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0.2em;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #003049;
+}
+
+.change-btn {
+  display: block;
+  margin: 1rem auto;
+  background-color: #e9c46a;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 2em;
+  font-size: 1.2rem;
+  color: #264653;
+  font-weight: 700;
 }
 
 #grid-container {
   display: flex;
   flex-wrap: wrap;
-  height: 800px;
-  width: 800px;
+  height: 700px;
+  width: 700px;
+  border: 20px solid black;
 }
 
 .item {

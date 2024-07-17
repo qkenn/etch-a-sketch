@@ -1,15 +1,21 @@
 const gridContainer = document.getElementById('grid-container');
+const gridChangeBtn = document.getElementById('change-grid');
+
+// initial grid render
+renderGrid(40);
 
 function getGridSize() {
   const gridSize = window.prompt('Enter grid size', 30);
 
   if (isNaN(+gridSize) && !gridSize) return;
 
-  createGrid(gridSize);
+  renderGrid(gridSize);
 }
 
-function createGrid(gridSize) {
+function renderGrid(gridSize) {
   if (!gridSize) return;
+
+  gridContainer.innerHTML = '';
 
   for (let i = 0; i < gridSize * gridSize; i++) {
     const gridItem = document.createElement('div');
@@ -30,4 +36,7 @@ function changeGridColor() {
   });
 }
 
-getGridSize();
+// re-render grid
+gridChangeBtn.addEventListener('click', () => {
+  getGridSize();
+});

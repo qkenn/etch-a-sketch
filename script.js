@@ -5,9 +5,10 @@ const gridChangeBtn = document.getElementById('change-grid');
 renderGrid(40);
 
 function getGridSize() {
-  const gridSize = window.prompt('Enter grid size', 30);
+  const gridSize = window.prompt('Enter grid size', 20);
 
   if (isNaN(+gridSize) && !gridSize) return;
+  if (gridSize > 100) return;
 
   renderGrid(gridSize);
 }
